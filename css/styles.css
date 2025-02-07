@@ -1,0 +1,441 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(353, 93%, 50%);
+  --first-color-alt: hsl(353, 93%, 46%);
+  --first-color-dark: hsl(353, 50%, 15%);
+  --title-color: hsl(353, 48%, 12%);
+  --text-color: hsl(353, 16%, 32%);
+  --text-color-light: hsl(353, 16%, 48%);
+  --white-color: hsl(24, 86%, 90%);
+  --body-color: hsl(24, 86%, 88%);
+  --container-color: hsl(24, 86%, 92%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(353, 100%, 8%, .2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(353, 100%, 8%, .2));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Carter One", system-ui;
+  --biggest-font-size: 2.5rem;
+  --bigger-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.25rem;
+    --bigger-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-regular);
+  font-family: var(--second-font);
+  line-height: 120%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: var(--bigger-font-size);
+  margin-bottom: 2rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  font-family: var(--second-font);
+  color: #000;
+  height: var(--header-height);
+  z-index: var(--z-fixed);
+}
+
+.header-shadow {
+  box-shadow: 0 8px 16px gray;
+}
+
+header a:visited {
+  color: #000;
+}
+
+header .header-logo {
+  display: flex;
+  align-items: center;
+}
+
+header .header-logo img {
+  width: 30px;
+  margin-right: 0.25rem;
+}
+
+.header-list nav {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+header .menu-button {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Add shadow header */
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home-container {
+  justify-items: center;
+  row-gap: 6rem;
+}
+
+.home-data {
+  position: relative;
+}
+
+.home-data .section-title h1 {
+  font-family: var(--second-font);
+  font-size: var(--biggest-font-size);
+}
+
+.section-description p {
+  font-family: var(--body-font);
+  text-align: center;
+  font-weight: var(--font-medium);
+}
+
+.home-data button {
+  justify-self: center;
+
+}
+
+.home-data .home-sticker {
+  position: absolute;
+  width: 45px;
+  opacity: 0.7;
+}
+
+.home-data .home-sticker-1 {
+  right: 1rem;
+  bottom: 2.5rem;
+}
+
+.home-data .home-sticker-2 {
+  left: 1rem;
+  bottom: -1rem;
+}
+
+.home-image {
+  position: relative;
+  display: grid;
+  width: 350px;
+  justify-items: center;
+  align-self: center;
+  margin-bottom: 3rem;
+}
+
+.home-image .home-pizza,
+.home-image .home-board {
+  width: 400px;
+  filter: var(--shadow-big-img);
+  -webkit-filter: var(--shadow-big-img);
+}
+
+.home-image .home-board {
+  position: absolute;
+  bottom: -0.75rem;
+}
+
+.home-image .home-pizza {
+  z-index: 2;
+}
+
+.home-image .leaf {
+  z-index: 3;
+  width: 60px;
+  position: absolute;
+}
+
+.leaf.home-leaf-1 {
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.leaf.home-leaf-2 {
+  top: 3rem;
+  left: 1rem;
+}
+
+
+.leaf.home-leaf-3 {
+  top: 3rem;
+  right: 1rem;
+}
+
+
+.leaf.home-leaf-4 {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.leaf.home-leaf-5 {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.leaf.home-leaf-6 {
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+
+/*=============== BUTTON ===============*/
+button {
+  background-color: var(--first-color);
+  padding: 0.75rem 2rem;
+  font-family: var(--second-font);
+  color: var(--white-color);
+  cursor: pointer;
+  box-shadow: 0 4px 16px gray;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  transition: transform 0.4s, background-color 0.4s;
+  -webkit-transition: transform 0.4s, background-color 0.4s;
+  -moz-transition: transform 0.4s, background-color 0.4s;
+  -ms-transition: transform 0.4s, background-color 0.4s;
+  -o-transition: transform 0.4s, background-color 0.4s;
+}
+
+button:hover {
+  background-color: var(--first-color-alt);
+  transform: translateY(-0.25rem);
+  -webkit-transform: translateY(-0.25rem);
+  -moz-transform: translateY(-0.25rem);
+  -ms-transform: translateY(-0.25rem);
+  -o-transform: translateY(-0.25rem);
+}
+
+
+/*=============== ABOUT ===============*/
+.about {
+  background-color: var(--container-color);
+}
+
+.about-container {
+  row-gap: 2rem;
+  justify-items: center;
+}
+
+.about-container button {
+  display: block;
+  justify-self: center;
+}
+
+.about-data {
+  display: grid;
+  row-gap: 1rem;
+  position: relative;
+}
+
+.about-data img {
+  width: 40px;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.about-image {
+  filter: var(--shadow-big-img);
+  -webkit-filter: var(--shadow-big-img);
+}
+
+/*=============== POPULAR ===============*/
+
+.popular-container {
+  row-gap: 1rem;
+}
+
+.popular-swapper {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+
+.popular-swapper .dish-img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 300px;
+  top: -1rem;
+}
+
+.popular img {
+  width: 260px;
+  margin-inline: 10px;
+}
+
+/* Swiper class */
+.swiper {
+  overflow: visible;
+}
+
+
+/*=============== RECIPE ===============*/
+
+
+/*=============== PRODUCTS ===============*/
+
+
+/*=============== CONTACT ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width:460px) {
+  .header-list {
+    display: none;
+  }
+
+  header .menu-button {
+    display: inline-flex;
+  }
+}
+
+/* For medium devices */
+
+
+/* For large devices */
